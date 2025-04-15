@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Estate - Агентство недвижимости</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">Prime<span>Estate</span></a>
+                <nav class="nav">
+                    <a href="index.html" class="nav__link active">Главная</a>
+                    <a href="catalog.html" class="nav__link">Каталог</a>
+                    <a href="contacts.html" class="nav__link">Контакты</a>
+                    <a href="#" class="nav__link" id="loginLink">Войти</a>
+                </nav>
+                <button class="nav-toggle" id="navToggle">
+                    <span class="nav-toggle__item">Меню</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <h1 class="intro__title">Найдите свой идеальный дом</h1>
+                <p class="intro__subtitle">Более 1000 объектов недвижимости по всей стране</p>
+                <a href="catalog.html" class="btn btn--primary">Посмотреть каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section__title">Почему выбирают нас</h2>
+            <div class="features">
+                <div class="features__item">
+                    <i class="fas fa-home features__icon"></i>
+                    <h3 class="features__title">Большой выбор</h3>
+                    <p class="features__text">Более 1000 объектов в нашем каталоге</p>
+                </div>
+                <div class="features__item">
+                    <i class="fas fa-hand-holding-usd features__icon"></i>
+                    <h3 class="features__title">Выгодные цены</h3>
+                    <p class="features__text">Самые низкие цены на рынке</p>
+                </div>
+                <div class="features__item">
+                    <i class="fas fa-shield-alt features__icon"></i>
+                    <h3 class="features__title">Надежность</h3>
+                    <p class="features__text">10 лет на рынке недвижимости</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Properties -->
+    <section class="section section--gray">
+        <div class="container">
+            <h2 class="section__title">Популярные предложения</h2>
+            <div class="properties">
+                <div class="property">
+                    <img src="estate1.png" alt="Дом" class="property__img">
+                    <div class="property__content">
+                        <h3 class="property__title">Квартира в центре</h3>
+                        <p class="property__location"><i class="fas fa-map-marker-alt"></i> Москва, ул. Тверская</p>
+                        <div class="property__details">
+                            <span><i class="fas fa-bed"></i> 3</span>
+                            <span><i class="fas fa-bath"></i> 2</span>
+                            <span><i class="fas fa-ruler-combined"></i> 120 м²</span>
+                        </div>
+                        <div class="property__footer">
+                            <span class="property__price">15 000 000 ₽</span>
+                            <button class="btn btn--small" data-modal="propertyModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="property">
+                    <img src="dom.png" alt="Дом" class="property__img">
+                    <div class="property__content">
+                        <h3 class="property__title">Загородный дом</h3>
+                        <p class="property__location"><i class="fas fa-map-marker-alt"></i> Московская область</p>
+                        <div class="property__details">
+                            <span><i class="fas fa-bed"></i> 5</span>
+                            <span><i class="fas fa-bath"></i> 3</span>
+                            <span><i class="fas fa-ruler-combined"></i> 250 м²</span>
+                        </div>
+                        <div class="property__footer">
+                            <span class="property__price">25 000 000 ₽</span>
+                            <button class="btn btn--small" data-modal="propertyModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="property">
+                    <img src="studia.png" alt="Дом" class="property__img">
+                    <div class="property__content">
+                        <h3 class="property__title">Студия в новостройке</h3>
+                        <p class="property__location"><i class="fas fa-map-marker-alt"></i> Санкт-Петербург</p>
+                        <div class="property__details">
+                            <span><i class="fas fa-bed"></i> 1</span>
+                            <span><i class="fas fa-bath"></i> 1</span>
+                            <span><i class="fas fa-ruler-combined"></i> 40 м²</span>
+                        </div>
+                        <div class="property__footer">
+                            <span class="property__price">6 500 000 ₽</span>
+                            <button class="btn btn--small" data-modal="propertyModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="catalog.html" class="btn">Весь каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section section--cta">
+        <div class="container">
+            <div class="cta">
+                <h2 class="cta__title">Не нашли что искали?</h2>
+                <p class="cta__text">Оставьте заявку и мы подберем для вас идеальный вариант</p>
+                <button class="btn btn--primary" data-modal="requestModal">Оставить заявку</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="index.html" class="logo logo--footer">Prime<span>Estate</span></a>
+                    <p class="footer__text">Агентство недвижимости с 2010 года. Помогаем людям находить свой идеальный дом.</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Меню</h3>
+                    <ul class="footer__menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <address class="footer__address">
+                        <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Пушкина, 10</p>
+                        <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                        <p><i class="fas fa-envelope"></i> info@primeestate.ru</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2023 Prime Estate. Все права защищены.</p>
+                <div class="footer__social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="loginModal">
+        <div class="modal__content">
+            <button class="modal__close" data-close>&times;</button>
+            <h2 class="modal__title">Вход в личный кабинет</h2>
+            <form class="form">
+                <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email" required>
+                </div>
+                <div class="form__group">
+                    <input type="password" class="form__input" placeholder="Пароль" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Войти</button>
+            </form>
+            <p class="modal__text">Нет аккаунта? <a href="#" id="registerLink">Зарегистрироваться</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal">
+        <div class="modal__content">
+            <button class="modal__close" data-close>&times;</button>
+            <h2 class="modal__title">Регистрация</h2>
+            <form class="form">
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="Имя" required>
+                </div>
+                <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email" required>
+                </div>
+                <div class="form__group">
+                    <input type="password" class="form__input" placeholder="Пароль" required>
+                </div>
+                <div class="form__group">
+                    <input type="password" class="form__input" placeholder="Повторите пароль" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Зарегистрироваться</button>
+            </form>
+            <p class="modal__text">Уже есть аккаунт? <a href="#" id="loginLink2">Войти</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="propertyModal">
+        <div class="modal__content modal__content--wide">
+            <button class="modal__close" data-close>&times;</button>
+            <div class="property-modal">
+                <div class="property-modal__gallery">
+                    <img src="https://via.placeholder.com/800x600" alt="Дом" class="property-modal__img">
+                    <div class="property-modal__thumbs">
+                        
+                    </div>
+                </div>
+                <div class="property-modal__info">
+                    <h2 class="property-modal__title">Квартира в центре</h2>
+                    <p class="property-modal__location"><i class="fas fa-map-marker-alt"></i> Москва, ул. Тверская</p>
+                    <div class="property-modal__price">15 000 000 ₽</div>
+                    <div class="property-modal__details">
+                        <div class="property-modal__detail">
+                            <i class="fas fa-bed"></i>
+                            <span>3 спальни</span>
+                        </div>
+                        <div class="property-modal__detail">
+                            <i class="fas fa-bath"></i>
+                            <span>2 ванные</span>
+                        </div>
+                        <div class="property-modal__detail">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>120 м²</span>
+                        </div>
+                        <div class="property-modal__detail">
+                            <i class="fas fa-building"></i>
+                            <span>5 этаж</span>
+                        </div>
+                    </div>
+                    <p class="property-modal__description">
+                        Просторная 3-комнатная квартира в центре Москвы. Ремонт выполнен в современном стиле. Большая кухня-гостиная, панорамные окна, вид на город. Дом с охраняемой территорией, подземный паркинг.
+                    </p>
+                    <button class="btn btn--primary" data-modal="requestModal">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="requestModal">
+        <div class="modal__content">
+            <button class="modal__close" data-close>&times;</button>
+            <h2 class="modal__title">Оставить заявку</h2>
+            <form class="form">
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="Ваше имя" required>
+                </div>
+                <div class="form__group">
+                    <input type="tel" class="form__input" placeholder="Телефон" required>
+                </div>
+                <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email" required>
+                </div>
+                <div class="form__group">
+                    <textarea class="form__textarea" placeholder="Ваши пожелания"></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

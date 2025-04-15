@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог недвижимости | Prime Estate</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">Prime<span>Estate</span></a>
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Главная</a>
+                    <a href="catalog.html" class="nav__link active">Каталог</a>
+                    <a href="contacts.html" class="nav__link">Контакты</a>
+                    <a href="#" class="nav__link" id="loginLink">Войти</a>
+                </nav>
+                <button class="nav-toggle" id="navToggle">
+                    <span class="nav-toggle__item">Меню</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Catalog -->
+    <section class="section">
+        <div class="container">
+            <h1 class="section__title">Каталог недвижимости</h1>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filters__group">
+                    <label for="type">Тип недвижимости:</label>
+                    <select id="type" class="filters__select">
+                        <option value="all">Все</option>
+                        <option value="apartment">Квартира</option>
+                        <option value="house">Дом</option>
+                        <option value="commercial">Коммерческая</option>
+                    </select>
+                </div>
+                <div class="filters__group">
+                    <label for="rooms">Количество комнат:</label>
+                    <select id="rooms" class="filters__select">
+                        <option value="all">Любое</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3+</option>
+                    </select>
+                </div>
+                <div class="filters__group">
+                    <label for="price">Цена до:</label>
+                    <select id="price" class="filters__select">
+                        <option value="all">Любая</option>
+                        <option value="5000000">5 000 000 ₽</option>
+                        <option value="10000000">10 000 000 ₽</option>
+                        <option value="20000000">20 000 000 ₽</option>
+                    </select>
+                </div>
+                <button class="btn btn--small" id="applyFilters">Применить</button>
+            </div>
+            
+            <!-- Properties Grid -->
+            <div class="properties-grid">
+                <div class="property" data-type="apartment" data-rooms="2" data-price="8500000">
+                    <img src="cv1.png" alt="Квартира" class="property__img">
+                    <div class="property__content">
+                        <h3 class="property__title">2-комн. квартира</h3>
+                        <p class="property__location"><i class="fas fa-map-marker-alt"></i> Москва, ЦАО</p>
+                        <div class="property__details">
+                            <span><i class="fas fa-bed"></i> 2</span>
+                            <span><i class="fas fa-bath"></i> 1</span>
+                            <span><i class="fas fa-ruler-combined"></i> 65 м²</span>
+                        </div>
+                        <div class="property__footer">
+                            <span class="property__price">8 500 000 ₽</span>
+                            <button class="btn btn--small" data-modal="propertyModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="property" data-type="apartment" data-rooms="1" data-price="5500000">
+                    <img src="cv2.png" alt="Квартира" class="property__img">
+                    <div class="property__content">
+                        <h3 class="property__title">1-комн. квартира</h3>
+                        <p class="property__location"><i class="fas fa-map-marker-alt"></i> Москва, САО</p>
+                        <div class="property__details">
+                            <span><i class="fas fa-bed"></i> 1</span>
+                            <span><i class="fas fa-bath"></i> 1</span>
+                            <span><i class="fas fa-ruler-combined"></i> 40 м²</span>
+                        </div>
+                        <div class="property__footer">
+                            <span class="property__price">5 500 000 ₽</span>
+                            <button class="btn btn--small" data-modal="propertyModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="property" data-type="house" data-rooms="4" data-price="18500000">
+                    <img src="dom2.png" alt="Дом" class="property__img">
+                    <div class="property__content">
+                        <h3 class="property__title">Загородный дом</h3>
+                        <p class="property__location"><i class="fas fa-map-marker-alt"></i> Московская обл.</p>
+                        <div class="property__details">
+                            <span><i class="fas fa-bed"></i> 4</span>
+                            <span><i class="fas fa-bath"></i> 2</span>
+                            <span><i class="fas fa-ruler-combined"></i> 180 м²</span>
+                        </div>
+                        <div class="property__footer">
+                            <span class="property__price">18 500 000 ₽</span>
+                            <button class="btn btn--small" data-modal="propertyModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="property" data-type="apartment" data-rooms="3" data-price="12500000">
+                    <img src="cv3.png" alt="Квартира" class="property__img">
+                    <div class="property__content">
+                        <h3 class="property__title">3-комн. квартира</h3>
+                        <p class="property__location"><i class="fas fa-map-marker-alt"></i> Москва, ЮЗАО</p>
+                        <div class="property__details">
+                            <span><i class="fas fa-bed"></i> 3</span>
+                            <span><i class="fas fa-bath"></i> 2</span>
+                            <span><i class="fas fa-ruler-combined"></i> 95 м²</span>
+                        </div>
+                        <div class="property__footer">
+                            <span class="property__price">12 500 000 ₽</span>
+                            <button class="btn btn--small" data-modal="propertyModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="property" data-type="commercial" data-rooms="0" data-price="22000000">
+                    <img src="ofis.png" alt="Коммерческая" class="property__img">
+                    <div class="property__content">
+                        <h3 class="property__title">Офисное помещение</h3>
+                        <p class="property__location"><i class="fas fa-map-marker-alt"></i> Москва, БЦ "Омега"</p>
+                        <div class="property__details">
+                            <span><i class="fas fa-door-open"></i> 3</span>
+                            <span><i class="fas fa-ruler-combined"></i> 120 м²</span>
+                        </div>
+                        <div class="property__footer">
+                            <span class="property__price">22 000 000 ₽</span>
+                            <button class="btn btn--small" data-modal="propertyModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="property" data-type="apartment" data-rooms="2" data-price="7500000">
+                    <img src="cv4.png" alt="Квартира" class="property__img">
+                    <div class="property__content">
+                        <h3 class="property__title">2-комн. квартира</h3>
+                        <p class="property__location"><i class="fas fa-map-marker-alt"></i> Москва, СЗАО</p>
+                        <div class="property__details">
+                            <span><i class="fas fa-bed"></i> 2</span>
+                            <span><i class="fas fa-bath"></i> 1</span>
+                            <span><i class="fas fa-ruler-combined"></i> 60 м²</span>
+                        </div>
+                        <div class="property__footer">
+                            <span class="property__price">7 500 000 ₽</span>
+                            <button class="btn btn--small" data-modal="propertyModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="pagination__link disabled">&laquo;</a>
+                <a href="#" class="pagination__link active">1</a>
+                <a href="#" class="pagination__link">2</a>
+                <a href="#" class="pagination__link">3</a>
+                <a href="#" class="pagination__link">&raquo;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="index.html" class="logo logo--footer">Prime<span>Estate</span></a>
+                    <p class="footer__text">Агентство недвижимости с 2010 года. Помогаем людям находить свой идеальный дом.</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Меню</h3>
+                    <ul class="footer__menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <address class="footer__address">
+                        <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Пушкина, 10</p>
+                        <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                        <p><i class="fas fa-envelope"></i> info@primeestate.ru</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2023 Prime Estate. Все права защищены.</p>
+                <div class="footer__social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="loginModal">
+        <div class="modal__content">
+            <button class="modal__close" data-close>&times;</button>
+            <h2 class="modal__title">Вход в личный кабинет</h2>
+            <form class="form">
+                <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email" required>
+                </div>
+                <div class="form__group">
+                    <input type="password" class="form__input" placeholder="Пароль" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Войти</button>
+            </form>
+            <p class="modal__text">Нет аккаунта? <a href="#" id="registerLink">Зарегистрироваться</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal">
+        <div class="modal__content">
+            <button class="modal__close" data-close>&times;</button>
+            <h2 class="modal__title">Регистрация</h2>
+            <form class="form">
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="Имя" required>
+                </div>
+                <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email" required>
+                </div>
+                <div class="form__group">
+                    <input type="password" class="form__input" placeholder="Пароль" required>
+                </div>
+                <div class="form__group">
+                    <input type="password" class="form__input" placeholder="Повторите пароль" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Зарегистрироваться</button>
+            </form>
+            <p class="modal__text">Уже есть аккаунт? <a href="#" id="loginLink2">Войти</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="propertyModal">
+        <div class="modal__content modal__content--wide">
+            <button class="modal__close" data-close>&times;</button>
+            <div class="property-modal">
+                <div class="property-modal__gallery">
+                    <img src="https://via.placeholder.com/800x600" alt="Дом" class="property-modal__img">
+                    <div class="property-modal__thumbs">
+                        
+                    </div>
+                </div>
+                <div class="property-modal__info">
+                    <h2 class="property-modal__title">Название объекта</h2>
+                    <p class="property-modal__location"><i class="fas fa-map-marker-alt"></i> Адрес объекта</p>
+                    <div class="property-modal__price">0 ₽</div>
+                    <div class="property-modal__details">
+                        <div class="property-modal__detail">
+                            <i class="fas fa-bed"></i>
+                            <span>0 спален</span>
+                        </div>
+                        <div class="property-modal__detail">
+                            <i class="fas fa-bath"></i>
+                            <span>0 ванных</span>
+                        </div>
+                        <div class="property-modal__detail">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>0 м²</span>
+                        </div>
+                        <div class="property-modal__detail">
+                            <i class="fas fa-building"></i>
+                            <span>0 этаж</span>
+                        </div>
+                    </div>
+                    <p class="property-modal__description">
+                        Описание объекта недвижимости будет загружено здесь.
+                    </p>
+                    <button class="btn btn--primary" data-modal="requestModal">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="requestModal">
+        <div class="modal__content">
+            <button class="modal__close" data-close>&times;</button>
+            <h2 class="modal__title">Оставить заявку</h2>
+            <form class="form">
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="Ваше имя" required>
+                </div>
+                <div class="form__group">
+                    <input type="tel" class="form__input" placeholder="Телефон" required>
+                </div>
+                <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email" required>
+                </div>
+                <div class="form__group">
+                    <textarea class="form__textarea" placeholder="Ваши пожелания"></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
